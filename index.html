@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<link rel="icon" href="../assets/img/favicon.ico">
+	<link rel="icon" href="../assets/img/headerlogo.png">
 	
 	<title>Bootstrap to WordPress</title>
 	
@@ -17,7 +17,7 @@
 	
 	<!-- Font Awesome Icons -->
 	<link href="../assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	
+ 	
 	<!-- Custom CSS -->
 	<link href="../assets/css/custom.css" rel="stylesheet">
 	<link href="../assets/css/my.css" rel="stylesheet">
@@ -33,18 +33,78 @@
 	<!--[endif]-->
 	
 
+	<style>
+	body,html{
+	margin:0;
+	padding:0;
+	font-family:sans-serif;
+	width:100%;
+	height:100%;
+	}
+	.section-top{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	position:relative;
+	background-image:url("/assets/img/banner2.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	animation:slide 10s infinite;
+	}
 	
+	.content{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	text-transform:uppercase;
+	text-align:center;
+	}
+	
+	.content h1{
+	color:white;
+	font-size:60px;
+	letter-spacing:16px;
+	}
+	
+	.content a{
+	background:#0984e3;
+	padding:10px 24px;
+	color:white;
+	text-decoration:none;
+	font-size:18px;
+	border-radius:20px;
+	}
+	
+	@keyframes slide{
+	0%{
+	background-image:url("/assets/img/banner2.jpg");
+	}
+	33%{
+	background-image:url("/assets/img/img4.jpg");
+	}
+	67%{
+	background-image:url("/assets/img/img3.jpg");
+	}
+	}
+	
+#nak {
+   visibility:hidden;
+  transition: top 0.3s;
+}
+
+	</style>
 </head>
 
 <body>
 	
 	<!-- HEADER
 	================================================== -->
-	<header class="site-header" role="banner">
+	<header class="site-header" role="banner" >
 		
 		<!-- NAVBAR
 		================================================== -->
-		<div class="navbar-wrapper">
+		<div class="navbar-wrapper" id="nak">
 			
 			<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 				<div class="container">
@@ -70,28 +130,42 @@
 		
 		</div>
 	</header>
+  	
+	
+	
+	
+	
+	
+	
+	
+	<div class="section-top" data-type="background" data-speed="5" >
+		<div class="content">
+			<h1>MANTRA YATRA</h1>
+			
+			
+			<a href="#boost-income" class="btn btn-lg">signup</a>
+			
+		</div>
+	</div>
+	
+	
+	
+	
 
-
- 	
-    <!-- HERO
-    ================================================== -->
-    <section style="height:675px;" id="hero" data-type="background" data-speed="5"  style="background: url('../assets/img/banner2.jpg') 50% 0 repeat fixed;">
-    	<article class="container">
-    		<div class="row ">
-    			 
-						<div class="col-sm-8">
-    				
-		    			<img src="../assets/img/logo-badge.png" alt="Bootstrap to Wordpress" class="logo">
-    				 </div>
-					 <div class="col-sm-2" style="margin-top:150px;">
-						
-			             <a href="#boost-income"><button class="btn btn-success  btn-lg">GET STARTED</button></a>
-						</div>
- 		    		
-    			</div><!-- row -->
-    		</div><!-- container -->
-    	</article>
-    </section>
+    <!-- Why mantra yatra
+	================================================== -->
+	<section id="boost-income">
+		<div class="container">
+			
+			<div class="section-header">
+				<img src="../assets/img/icon-boost.png" alt="Chart">
+				<h2>Why Mantra Yatra ?</h2>
+			</div><!-- section-header -->
+			
+			<p class="lead">Before organising any tour, we personally visit all the places and ensure everything is in place. We take small groups of people only to give our Yatris personalised attention and quality service. Senior citizens are taken care of well by us.We always provide comfortable Hotels and Twin Sharing rooms only. Tour Organiser travels with the group and explains the Importance and History of each and Place We take utmost care to give you the best food.So far we have more than 400 Satisfied and Happy Yatris. Our Three Pillars of a tour : Accommodation / Transport / Food – We always choose the Best</p>
+		</div><!-- container -->
+	</section><!-- boost-income -->
+	
 	
 	
 	<!-- OPT IN SECTION
@@ -115,19 +189,6 @@
     </section><!-- optin -->
     
     
-    <!-- Why mantra yatra
-	================================================== -->
-	<section id="boost-income">
-		<div class="container">
-			
-			<div class="section-header">
-				<img src="../assets/img/icon-boost.png" alt="Chart">
-				<h2>Why Mantra Yatra ?</h2>
-			</div><!-- section-header -->
-			
-			<p class="lead">Before organising any tour, we personally visit all the places and ensure everything is in place. We take small groups of people only to give our Yatris personalised attention and quality service. Senior citizens are taken care of well by us.We always provide comfortable Hotels and Twin Sharing rooms only. Tour Organiser travels with the group and explains the Importance and History of each and Place We take utmost care to give you the best food.So far we have more than 400 Satisfied and Happy Yatris. Our Three Pillars of a tour : Accommodation / Transport / Food – We always choose the Best</p>
-		</div><!-- container -->
-	</section><!-- boost-income -->
 	
 	
 	<!-- Upcoming yatras
@@ -137,18 +198,18 @@
 			<div class="section-header ">
 			  <h2 class="text-center">UPCOMING YATRAS</h2>
 				<hr><br>
-			  <div class="wrapper">
+			  <div class="wrapper" style="">
   
   <div class="cols">
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
+			<div class="col" ontouchstart="this.classList.toggle('hover');" style="width:300px;">
 				<div class="container1">
-					<div class="front" style="background-image: url('../assets/img/banner.jpg')">
+					<div class="front" style="background-image: url('../assets/img/banner.jpg');">
 						<div class="inner">
 							<p>Diligord</p>
                
 						</div>
 					</div>
-					<div class="back">
+					<div class="back" >
 						<div class="inner">
 						  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
 						</div>
@@ -156,7 +217,7 @@
 				</div>
 			</div>
 			
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
+			<div class="col" ontouchstart="this.classList.toggle('hover');" style="width:300px;">
 				<div class="container1">
 					<div class="front" style="background-image: url('../assets/img/banner2.jpg')">
 						<div class="inner">
@@ -172,7 +233,7 @@
 				</div>
 			</div>
 			
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
+			<div class="col" ontouchstart="this.classList.toggle('hover');" style="width:300px;">
 				<div class="container1">
 					<div class="front" style="background-image: url('../assets/img/banner3.jpg')">
 						<div class="inner">
@@ -188,7 +249,7 @@
 				</div>
 			</div>
 			
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
+			<div class="col" ontouchstart="this.classList.toggle('hover');"style="width:300px;">
 			<div class="container1">
 					<div class="front" style="background-image: url('../assets/img/banner3.jpg')">
 						<div class="inner">
@@ -203,7 +264,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
+			<div class="col" ontouchstart="this.classList.toggle('hover');" style="width:300px;">
 				<div class="container1">
 					<div class="front" style="background-image: url('../assets/img/banner3.jpg')">
 						<div class="inner">
@@ -219,7 +280,7 @@
 				</div>
 			</div>
 			
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
+			<div class="col" ontouchstart="this.classList.toggle('hover');"style="width:300px;">
 				<div class="container1">
 					<div class="front" style="background-image: url('../assets/img/banner3.jpg')">
 						<div class="inner">
@@ -235,7 +296,7 @@
 				</div>
 			</div>
 			
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
+			<div class="col" ontouchstart="this.classList.toggle('hover');" style="width:300px;">
 				<div class="container1">
 					<div class="front" style="background-image: url('../assets/img/banner3.jpg')">
 						<div class="inner">
@@ -251,7 +312,23 @@
 				</div>
 			</div>
 			
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
+			<div class="col" ontouchstart="this.classList.toggle('hover');" style="width:300px;">
+				<div class="container1">
+					<div class="front" style="background-image: url('../assets/img/banner3.jpg')">
+						<div class="inner">
+							<p>Sohanidd</p>
+               
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col" ontouchstart="this.classList.toggle('hover');" style="width:300px;">
 				<div class="container1">
 					<div class="front" style="background-image: url('../assets/img/banner3.jpg')">
 						<div class="inner">
@@ -466,6 +543,21 @@
     <!-- Placed at the end of the document so the pages load faster -->
 	
 	<!-- upcoming in index -->
+	 
+	 <script>
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("nak").style.visibility = "visible";
+  } else {
+    document.getElementById("nak").style.visibility = "hidden";
+  }
+}
+</script>
+
+
 	
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="../assets/js/jquery-2.1.1.min.js"></script>
